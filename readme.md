@@ -1,1 +1,1 @@
-[Frontend]('https://github.com/FendiAnwarRifai/fe_galery)
+[Frontend](https://github.com/FendiAnwarRifai/fe_galery)
