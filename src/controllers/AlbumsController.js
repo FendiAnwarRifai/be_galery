@@ -13,7 +13,8 @@ const albums = {
         model.albums.findAll({
             where: { title: { [Op.like]: `%${req.query.q}%` } },
             offset: currentPages, limit: perPage,
-            order: [['id', sort]]
+            order: [['id', sort]],
+            group: 'id'
 
         }).then((result) => {
             model.albums.findAll({
@@ -29,7 +30,7 @@ const albums = {
                         response: 'success',
                         message: 'success get all data',
                     },
-                    pagimation : {
+                    pagination : {
                         from: currentPages + 1,
                         to: to,
                         currentPages: currentPages,
